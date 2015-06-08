@@ -631,9 +631,9 @@ var pixelBuffer_prototype = function() {
       var w = imageData.width,
         h = imageData.height;
 
-      var hue = 360 * parseFloat(options.hue, 10) || 0;
-      var saturation = 255 * (parseFloat(options.saturation, 10) || 0);
-      var lightness = 255 * (parseFloat(options.lightness, 10) || 0);
+      var hue = 360 * parseFloat(options.hue || 0, 10);
+      var saturation = 255 * (parseFloat(options.saturation || 0, 10));
+      var lightness = 255 * (parseFloat(options.lightness || 0, 10));
 
 
       // this seems to give the same result as Photoshop
