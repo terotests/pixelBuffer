@@ -518,8 +518,8 @@ var pixelBuffer_prototype = function() {
       var w = imageData.width;
       var h = imageData.height;
 
-      var brightness = parseInt(options.brightness, 10) || 0;
-      var contrast = parseFloat(options.contrast) || 0;
+      var brightness = (parseInt(options.brightness, 10) || 0) * 150;
+      var contrast = (parseFloat(options.contrast) || 0) * 150;
       var legacy = false;
 
       if (legacy) {
@@ -631,9 +631,9 @@ var pixelBuffer_prototype = function() {
       var w = imageData.width,
         h = imageData.height;
 
-      var hue = parseInt(options.hue, 10) || 0;
-      var saturation = (parseInt(options.saturation, 10) || 0) / 100;
-      var lightness = (parseInt(options.lightness, 10) || 0) / 100;
+      var hue = 360 * parseInt(options.hue, 10) || 0;
+      var saturation = 255 * (parseInt(options.saturation, 10) || 0) / 100;
+      var lightness = 255 * (parseInt(options.lightness, 10) || 0) / 100;
 
 
       // this seems to give the same result as Photoshop
