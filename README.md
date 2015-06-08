@@ -5,7 +5,9 @@ Create filters for HTML canvas pixel buffer, which is obtained using `getImageDa
 
 Libraries like stackBlur offer user interface based on HTML elements, in practical applications howerver it may be required to use several filters in random order and maintain the buffer in memory unti all the filters have been applied to it.
 
-Supported filters are
+The purpos of this library is to provide an API which can be used to implement more filters and apply them to the ImageData -buffer repeatedly as long as needed without writing data out of the memory buffer.
+
+Currently supported filters are
 
 - sepia
 - blur (based on Mario Klingemann`s stackBlur)
