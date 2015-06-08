@@ -513,7 +513,7 @@ var pixelBuffer_prototype = function() {
     }
     _myTrait_.brightnessContrast = function(imageData, options) {
       // 
-      var data = pixelBuffer.data;
+      var data = imageData.data;
 
       var w = imageData.width;
       var h = imageData.height;
