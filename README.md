@@ -11,6 +11,7 @@ Supported filters are
 - blur (based on Mario Klingemann`s stackBlur)
 - hsl
 - grayscale
+- brightnessContrast or `bc`
 
 Future additions possible from https://github.com/kig/canvasfilters
 or http://www.html5rocks.com/en/tutorials/canvas/imagefilters/
