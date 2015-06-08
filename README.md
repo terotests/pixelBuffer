@@ -5,7 +5,18 @@ Create filters for HTML canvas pixel buffer, which is obtained using `getImageDa
 
 Libraries like stackBlur offer user interface based on HTML elements, in practical applications howerver it may be required to use several filters in random order and maintain the buffer in memory unti all the filters have been applied to it.
 
-No documentation so far, this example shows how to use it:
+Supported filters are
+
+- sepia
+- blur (based on Mario Klingemann`s stackBlur)
+- hsl
+- grayscale
+
+Future additions possible from https://github.com/kig/canvasfilters
+or http://www.html5rocks.com/en/tutorials/canvas/imagefilters/
+
+
+This example shows how to use it:
 
 http://jsfiddle.net/besda423/
 
