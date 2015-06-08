@@ -1,7 +1,9 @@
 
 # pixelBuffer
 
-Create filters for HTML canvas pixel buffer. The point of the library is to allow better usability for the pixel buffers, there are already interfaces like stackBlur but they are difficult to use in practical applicaitons.
+Create filters for HTML canvas pixel buffer, which is obtained using `getImageData`.
+
+Libraries like stackBlur offer user interface based on HTML elements, in practical applications howerver it may be required to use several filters in random order and maintain the buffer in memory unti all the filters have been applied to it.
 
 No documentation so far, this example shows how to use it:
 
