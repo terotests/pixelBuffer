@@ -479,16 +479,14 @@ var pixelBuffer_prototype = function() {
     }
     _myTrait_.applyFilters = function(imageData, cmdList) {
       /*
+           var opts = {"grayscale" : 1, 
+                       "sepia" : 0.4,
+                       "outputCanvas" : buff.canvas};
            
-           opts = {
-              sepia : 0.3,
-              outputCanvas : ...
-           }
-           
-           [ "sepia", opts ]
-           [ "grayscale", opts ]
-           [ "brighnessContrast", opts ]
-           [ "output", opts ]
+           bb.applyFilters( buff.buffer, [
+               ["sepia", opts],
+               ["output", opts]
+           ])
            */
 
       var me = this;
@@ -625,15 +623,14 @@ var pixelBuffer_prototype = function() {
       }
 
     }
-    _myTrait_.hsl = function(fdata, w, h, amount) {
+    _myTrait_.hsl = function(imageData, options) {
 
 
-      if (!amount) return;
-      var data = fdata.cData.data;
+      var data = imageData.data;
 
-      var hue = parseInt(amount.h, 10) || 0;
-      var saturation = (parseInt(amount.s, 10) || 0) / 100;
-      var lightness = (parseInt(amount.l, 10) || 0) / 100;
+      var hue = parseInt(options.hue, 10) || 0;
+      var saturation = (parseInt(options.saturation, 10) || 0) / 100;
+      var lightness = (parseInt(options.lightness, 10) || 0) / 100;
 
 
       // this seems to give the same result as Photoshop
@@ -651,8 +648,6 @@ var pixelBuffer_prototype = function() {
       var light255 = lightness * 255;
       var lightp1 = 1 + lightness;
       var lightm1 = 1 - lightness;
-
-      // 			var data = Pixastic.prepareData(params);
 
       var p = w * h;
 
