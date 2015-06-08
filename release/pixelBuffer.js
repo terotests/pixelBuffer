@@ -518,8 +518,8 @@ var pixelBuffer_prototype = function() {
       var w = imageData.width;
       var h = imageData.height;
 
-      var brightness = (parseInt(options.brightness, 10) || 0) * 150;
-      var contrast = (parseFloat(options.contrast) || 0) * 150;
+      var brightness = (parseFloat(options.brightness || 0)) * 150;
+      var contrast = (parseFloat(options.contrast || 0)) * 150;
       var legacy = false;
 
       if (legacy) {
