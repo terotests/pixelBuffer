@@ -18,7 +18,7 @@ or http://www.html5rocks.com/en/tutorials/canvas/imagefilters/
 
 This example shows how to use it:
 
-http://jsfiddle.net/besda423/
+http://jsfiddle.net/1so9vwmL/
 
 ``` javascript
 
