@@ -628,6 +628,9 @@ var pixelBuffer_prototype = function() {
 
       var data = imageData.data;
 
+      var w = imageData.width,
+        h = imageData.height;
+
       var hue = parseInt(options.hue, 10) || 0;
       var saturation = (parseInt(options.saturation, 10) || 0) / 100;
       var lightness = (parseInt(options.lightness, 10) || 0) / 100;
